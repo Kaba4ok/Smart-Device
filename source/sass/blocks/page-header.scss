@@ -1,0 +1,160 @@
+.page-header {
+  padding-top: 33px;
+  padding-bottom: 263px;
+  color: #ffffff;
+  background-image: url("../img/bg-header-desktop@1x.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #1b2931;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-header-desktop@2x.jpg");
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 660px;
+  }
+
+  &__email-wrapper {
+    position: relative;
+    padding-left: 40px;
+    box-sizing: border-box;
+  }
+
+  &__icon-email {
+    position: absolute;
+    top: 3px;
+    left: 0;
+  }
+
+  &__email {
+    display: block;
+    font-size: 16px;
+  }
+
+  &__phone-wrapper {
+    position: relative;
+    padding-left: 35px;
+    box-sizing: border-box;
+  }
+
+  &__icon-phone {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__phone {
+    display: block;
+    font-size: 16px;
+  }
+
+  &__callback {
+    width: 180px;
+    padding: 13px 0 12px;
+    font-size: 14px;
+    border: 1px solid #ffffff;
+  }
+
+  &__scroll {
+    display: block;
+    width: 93px;
+    font-family: "PT Mono";
+    font-size: 14px;
+    font-weight: normal;
+    opacity: 0.5;
+    transform: translate(-35px, 130px) rotate(-90deg);
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 20px;
+    padding-bottom: 163px;
+    background-image: url("../img/bg-header-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-header-tablet@2x.jpg");
+    }
+
+    &__contacts {
+      width: 83px;
+    }
+
+    &__contacts-text {
+      display: none;
+    }
+
+    &__callback {
+      display: none;
+    }
+
+    &__email-wrapper {
+      padding-left: 0;
+    }
+
+    &__phone-wrapper {
+      padding-left: 0;
+    }
+
+    &__email {
+      width: 25px;
+      height: 19px;
+    }
+
+    &__icon-email {
+      top: -8px;
+      width: 25px;
+      height: 19px;
+    }
+
+    &__phone {
+      width: 24px;
+      height: 24px;
+    }
+
+    &__icon-phone {
+      top: -8px;
+      width: 24px;
+      height: 24px;
+    }
+
+    &__scroll {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 17px;
+    padding-bottom: 70px;
+    background-image: url("../img/bg-header-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-header-mobile@2x.jpg");
+    }
+
+    &__contacts {
+      width: 73px;
+    }
+
+    &__icon-email {
+      top: 0;
+    }
+
+    &__icon-phone {
+      top: 0;
+    }
+  }
+}

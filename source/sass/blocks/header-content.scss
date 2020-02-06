@@ -1,0 +1,115 @@
+.header-content {
+  width: 718px;
+  padding-top: 231px;
+  box-sizing: border-box;
+
+  & h2 {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 31px;
+    font-family: "Roboto Condensed";
+    font-size: 80px;
+    font-weight: bold;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  &__wrapper {
+    position: relative;
+    padding-left: 95px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 17px;
+      left: 5px;
+      width: 66px;
+      height: 2px;
+      background-color: #ffffff;
+    }
+  }
+
+  & p {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 37px;
+    font-family: "PT Mono";
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 156.8%;
+  }
+
+  & a {
+    display: block;
+    width: 407px;
+    padding: 19px 0 18px;
+    font-size: 16px;
+    background-color: #00b2ff;
+  }
+
+  &__mobile-btn-text {
+    display: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 470px;
+    padding-top: 116px;
+    padding-left: 66px;
+
+    & h2 {
+      font-size: 60px;
+      margin-bottom: 42px;
+    }
+
+    &__wrapper {
+      padding-left: 50px;
+
+      &::before {
+        top: 16px;
+        width: 33px;
+      }
+    }
+
+    & p {
+      font-size: 18px;
+      margin-bottom: 44px;
+    }
+
+    & a {
+      width: 379px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 277px;
+    padding-top: 231px;
+    padding-left: 0;
+
+    & h2 {
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
+
+    &__wrapper {
+      padding-left: 0;
+    }
+
+    & p {
+      font-size: 16px;
+      padding-left: 51px;
+      margin-bottom: 42px;
+    }
+
+    & a {
+      width: 287px;
+    }
+
+    &__btn-text {
+      display: none;
+    }
+
+    &__mobile-btn-text {
+      display: inline;
+    }
+  }
+}
