@@ -1,0 +1,125 @@
+.page-footer {
+  padding-top: 65px;
+  margin-top: auto;
+  background-color: #fafafa;
+
+  &__logo-nav-border-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 74%;
+    padding-bottom: 61px;
+    margin: 0 auto;
+  }
+
+  &__logo-border-wrapper {
+    width: 201px;
+  }
+
+  &__logo {
+    margin-bottom: 53px;
+  }
+
+  &__logo .logo__name {
+    color: #203c42;
+  }
+
+  &__prolongation {
+    display: none;
+  }
+
+  &__nav-contacts-wrapper {
+    display: flex;
+    width: 70%;
+  }
+
+  &__title {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 29px;
+    font-family: "Roboto Condensed";
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    color: #1b2d37;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 19px;
+
+    &__logo-nav-border-wrapper {
+      flex-direction: column;
+      width: 100%;
+      padding-bottom: 40px;
+    }
+
+    &__logo-border-wrapper {
+      width: 100%;
+      margin-right: 0;
+      border-bottom: 1px solid rgba(98, 105, 98, 0.2);
+    }
+
+    &__logo-prolongation-social-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 94%;
+      padding-bottom: 25px;
+      margin: 0 auto;
+    }
+
+    &__logo {
+      margin-bottom: 0;
+    }
+
+    &__prolongation {
+      display: block;
+      padding: 0;
+      margin: 0;
+      font-size: 13px;
+      font-weight: normal;
+      line-height: 24px;
+      color: rgba(27, 45, 55, 0.5);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    &__nav-contacts-wrapper {
+      width: 94%;
+      margin: 0 auto;
+      padding-top: 38px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+
+    &__logo-nav-border-wrapper {
+      padding-bottom: 0;
+    }
+
+    &__logo-prolongation-social-wrapper {
+      flex-direction: column;
+      align-items: center;
+      width: 91%;
+    }
+
+    &__logo {
+      margin-bottom: 26px;
+    }
+
+    &__prolongation {
+      margin-bottom: 31px;
+    }
+
+    &__nav-contacts-wrapper {
+      flex-direction: column;
+      width: 100%;
+      padding-top: 0;
+    }
+
+    &__title {
+      margin-bottom: 0;
+    }
+  }
+}

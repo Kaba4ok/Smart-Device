@@ -1,0 +1,38 @@
+.footer-contacts {
+  width: 34%;
+
+  &__menu-btn {
+    display: none;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    line-height: 25px;
+    color: rgba(27, 45, 55, 0.5);
+    list-style: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    position: relative;
+    width: 91%;
+    padding-top: 29px;
+    padding-bottom: 27px;
+    margin: 0 auto;
+
+    &__menu-btn {
+      display: block;
+      top: 29px;
+      right: 0;
+    }
+
+    &__list {
+      padding-top: 29px;
+    }
+  }
+}

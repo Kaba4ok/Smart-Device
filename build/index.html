@@ -64,39 +64,41 @@
       <div class="container">
         <div class="page-header__wrapper">
           <a class="page-header__logo logo">
-            <img src="img/icon-logo.svg" width="52" height="52" alt="Логотип компании Smart Device">
+            <img class="logo__img" src="img/icon-logo.svg" width="52" height="52" alt="Логотип компании Smart Device">
             <div class="logo__wrapper">
-              <h1>Smart Device</h1>
-              <h2>умные технологии</h2>
+              <h1 class="logo__name">Smart Device</h1>
+              <h2 class="logo__sign">умные технологии</h2>
             </div>
           </a>
 
-          <div class="page-header__contacts">
-            <div class="page-header__email-wrapper">
-              <svg class="page-header__icon-email" width="19" height="14">
-                <use xlink:href="#icon-mail"></use>
-              </svg>
-              <a class="page-header__email" href="mailto:info@sd.ru">
-                <span class="page-header__contacts-text">info@sd.ru</span>
+          <ul class="page-header__contacts header-contacts">
+            <li class="header-contacts__item">
+              <a class="header-contacts__link" href="mailto:info@sd.ru">
+                <svg class="header-contacts__icon header-contacts__icon--email" width="19" height="14">
+                  <use xlink:href="#icon-mail"></use>
+                </svg>
+                <span class="header-contacts__link-text">info@sd.ru</span>
               </a>
-            </div>
-            <div class="page-header__phone-wrapper">
-              <svg class="page-header__icon-phone" width="18" height="18">
-                <use xlink:href="#icon-phone"></use>
-              </svg>
-              <a class="page-header__phone" href="tel:+7 (495) 000 52 52">
-                <span class="page-header__contacts-text">+7 (495) 000 52 52</span>
+            </li>
+
+            <li class="header-contacts__item">
+              <a class="header-contacts__link" href="tel:+7 (495) 000 52 52">
+                <svg class="header-contacts__icon header-contacts__icon--phone" width="18" height="18">
+                  <use xlink:href="#icon-phone"></use>
+                </svg>
+                <span class="header-contacts__link-text">+7 (495) 000 52 52</span>
               </a>
-            </div>
-            <a class="page-header__callback btn" href="#">Заказать звонок</a>
-          </div>
+            </li>
+          </ul>
+
+          <a class="page-header__callback btn" href="#">Заказать звонок</a>
         </div>
 
         <div class="page-header__content header-content">
-          <h2>Печатные платы</h2>
+          <h2 class="header-content__title">Печатные платы</h2>
           <div class="header-content__wrapper">
-            <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-            <a class="btn" href="#feedback">
+            <p class="header-content__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+            <a class="header-content__btn btn" href="#feedback">
               <span class="header-content__btn-text">Получить бесплатную консультацию</span>
               <span class="header-content__mobile-btn-text">Бесплатная консультация</span>
             </a>
@@ -106,8 +108,121 @@
         <a class="page-header__scroll" href="#features">Скролл вниз</a>
       </div>
     </header>
+
     <section class="features" id="features"></section>
-    <footer></footer>
+
+    <footer class="page-footer">
+
+      <div class="page-footer__logo-nav-border-wrapper">
+        <div class="page-footer__logo-border-wrapper">
+          <div class="page-footer__logo-prolongation-social-wrapper">
+            <a class="page-footer__logo logo">
+              <img class="logo__img" src="img/icon-logo.svg" width="52" height="52" alt="Логотип компании Smart Device">
+              <div class="logo__wrapper">
+                <h1 class="logo__name">Smart Device</h1>
+                <h2 class="logo__sign">умные технологии</h2>
+              </div>
+            </a>
+
+            <p class="page-footer__prolongation">1999-2018 SD Service Devices</p>
+
+            <ul class="page-footer__social social">
+              <li>
+                <a href="#">
+                  <span class="visually-hidden">Мы в Facebook</span>
+                  <svg width="27" height="27">
+                    <use xlink:href="#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="visually-hidden">Мы в Odnoclassniki</span>
+                  <svg width="27" height="27">
+                    <use xlink:href="#icon-odnoklassniki"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="visually-hidden">Мы в Vkontakte</span>
+                  <svg width="27" height="27">
+                    <use xlink:href="#icon-vkontakte">
+                  </use></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="page-footer__nav-contacts-wrapper">
+          <div class="page-footer__sait-nav footer-sait-nav">
+            <div class="footer-sait-nav__wrapper">
+              <h2 class="page-footer__title">Разделы сайта</h2>
+              <button class="footer-sait-nav__menu-btn menu-btn menu-btn--close" type="button"><span class="visually-hidden"></span></button>
+              <ul class="footer-sait-nav__columns menu-close">
+                <li class="footer-sait-nav__column">
+                  <ul class="footer-sait-nav__column-list">
+                    <li>
+                      <a class="footer-sait-nav__link" href="#">О компании</a>
+                    </li>
+                    <li>
+                      <a class="footer-sait-nav__link" href="#">Продукты</a>
+                    </li>
+                    <li>
+                      <a class="footer-sait-nav__link" href="#">Производство печатных&nbsp;плат</a>
+                    </li>
+                    <li>
+                      <a class="footer-sait-nav__link" href="#">Монтаж печатных&nbsp;плат</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="footer-sait-nav__column">
+                  <ul class="footer-sait-nav__column-list">
+                    <li>
+                      <a class="footer-sait-nav__link" href="#">Комплектующие</a>
+                    </li>
+                    <li>
+                      <a class="footer-sait-nav__link" href="#">Доставка</a>
+                    </li>
+                    <li>
+                      <a class="footer-sait-nav__link" href="#">Контакты</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="page-footer__contacts footer-contacts">
+            <h2 class="page-footer__title">Наш офис</h2>
+            <button class="footer-contacts__menu-btn menu-btn menu-btn--close" type="button"><span class="visually-hidden"></span></button>
+            <ul class="footer-contacts__list menu-close">
+              <li>г. Мытищи, Олимпийский проспект,&nbsp;д.10</li>
+              <li>+7 (495) 589-40-50</li>
+              <li>+7 (925) 003-87-67</li>
+              <li>+7 (926) 926-080-79</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-footer__copyright copyright">
+        <div class="copyright__wrapper">
+          <div class="copyright__texts">
+            <p class="copyright__text">Все права защищены</p>
+            <p class="copyright__text">1999-2018 SD Service Devices</p>
+          </div>
+          <div class="copyright__links">
+            <a class="copyright__link" href="#">Условия конфиденциальности</a>
+            <a class="copyright__link" href="#">Developed by wow studio</a>
+          </div>
+        </div>
+      </div>
+
+    </footer>
   </div>
+
+  <script src="js/menu.js"></script>
 </body>
 </html>

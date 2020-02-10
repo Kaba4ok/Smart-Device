@@ -14,59 +14,19 @@
 
   &__wrapper {
     display: flex;
-    justify-content: space-between;
-  }
-
-  & a {
-    color: #ffffff;
-    text-decoration: none;
-  }
-
-  &__contacts {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 660px;
   }
 
-  &__email-wrapper {
-    position: relative;
-    padding-left: 40px;
-    box-sizing: border-box;
-  }
-
-  &__icon-email {
-    position: absolute;
-    top: 3px;
-    left: 0;
-  }
-
-  &__email {
-    display: block;
-    font-size: 16px;
-  }
-
-  &__phone-wrapper {
-    position: relative;
-    padding-left: 35px;
-    box-sizing: border-box;
-  }
-
-  &__icon-phone {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  &__phone {
-    display: block;
-    font-size: 16px;
+  &__logo {
+    margin-right: auto;
   }
 
   &__callback {
     width: 180px;
     padding: 13px 0 12px;
     font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
     border: 1px solid #ffffff;
   }
 
@@ -76,6 +36,8 @@
     font-family: "PT Mono";
     font-size: 14px;
     font-weight: normal;
+    color: #ffffff;
+    text-decoration: none;
     opacity: 0.5;
     transform: translate(-35px, 130px) rotate(-90deg);
   }
@@ -89,46 +51,8 @@
       background-image: url("../img/bg-header-tablet@2x.jpg");
     }
 
-    &__contacts {
-      width: 83px;
-    }
-
-    &__contacts-text {
-      display: none;
-    }
-
     &__callback {
       display: none;
-    }
-
-    &__email-wrapper {
-      padding-left: 0;
-    }
-
-    &__phone-wrapper {
-      padding-left: 0;
-    }
-
-    &__email {
-      width: 25px;
-      height: 19px;
-    }
-
-    &__icon-email {
-      top: -8px;
-      width: 25px;
-      height: 19px;
-    }
-
-    &__phone {
-      width: 24px;
-      height: 24px;
-    }
-
-    &__icon-phone {
-      top: -8px;
-      width: 24px;
-      height: 24px;
     }
 
     &__scroll {
@@ -145,16 +69,16 @@
       background-image: url("../img/bg-header-mobile@2x.jpg");
     }
 
-    &__contacts {
-      width: 73px;
+    &__logo .logo__name {
+      display: none;
     }
 
-    &__icon-email {
-      top: 0;
+    &__logo .logo__sign {
+      display: none;
     }
 
-    &__icon-phone {
-      top: 0;
+    &__logo {
+      width: 38px;
     }
   }
 }
