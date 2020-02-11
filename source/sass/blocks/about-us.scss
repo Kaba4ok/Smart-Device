@@ -1,0 +1,114 @@
+.about-us {
+  padding-top: 55px;
+  padding-bottom: 110px;
+  padding-left: 180px;
+  background-image: url("../img/2005-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: left top 55px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/2005-desktop@2x.jpg");
+    background-size: 117px 317px;
+  }
+
+  &__title {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 18px;
+    font-family: "Roboto Condensed";
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 140.6%;
+    color: #666666;
+  }
+
+  &__description {
+    margin-bottom: 39px;
+  }
+
+  &__paragraph {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 22px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 134.4%;
+    color: #666666;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--not-desktop {
+      display: none;
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 180px;
+    padding: 14px 12px 12px;
+    font-size: 14px;
+    color: #00b2ff;
+    text-decoration: none;
+    border: 1px solid #00b2ff;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 30px;
+    padding-left: 188px;
+    padding-bottom: 83px;
+    background-image: url("../img/2005-tablet@1x.jpg");
+    background-position: left top 30px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/2005-tablet@2x.jpg");
+    background-size: 135px 351px;
+  }
+
+    &__title {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+
+    &__description {
+      margin-bottom: 42px;
+    }
+
+    &__paragraph {
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+
+      // &--only-desktop {
+      //   display: none;
+      // }
+
+      // &--not-desktop {
+      //   display: block;
+      // }
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 0;
+    padding-bottom: 65px;
+    background: none;
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__description {
+      margin-bottom: 30px;
+    }
+
+    &__paragraph {
+      margin-bottom: 43px;
+      -webkit-line-clamp: 8;
+    }
+  }
+}

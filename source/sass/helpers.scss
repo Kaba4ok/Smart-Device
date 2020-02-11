@@ -24,18 +24,26 @@
   width: 74%;
   margin: 0 auto;
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     width: 94%;
   }
 
-  @media(max-width: $mobile-width) {
+  @media (max-width: $mobile-width) {
     width: 91%;
   }
 }
 
 .content-wrapper {
-  width: 60%;
+  width: 61%;
   margin: 0 auto;
+
+  @media (max-width: $tablet-width) {
+    width: 94%;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 91%;
+  }
 }
 
 .btn {
