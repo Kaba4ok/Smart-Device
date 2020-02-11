@@ -15,8 +15,8 @@
       background-image: url("../img/bg-about_us-tablet@1x.jpg");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-about_us-tablet@1x.jpg");
-    }
+        background-image: url("../img/bg-about_us-tablet@1x.jpg");
+      }
     }
   }
 
@@ -25,8 +25,8 @@
       background-image: url("../img/bg-about_us-mobile@1x.jpg");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-about_us-mobile@1x.jpg");
-    }
+        background-image: url("../img/bg-about_us-mobile@1x.jpg");
+      }
     }
   }
 }
