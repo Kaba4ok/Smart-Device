@@ -1,0 +1,75 @@
+.feedback {
+  padding-top: 96px;
+  padding-bottom: 114px;
+  font-weight: normal;
+  color: #ffffff;
+  background-image: url("../img/bg-form-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #00b2ff;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-form-desktop@2x.jpg");
+  }
+
+  &__wrapper {
+    width: 49%;
+    margin-left: 51%;
+  }
+
+  &__title {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 7px;
+    font-family: "Roboto Condensed";
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 140.6%;
+  }
+
+  &__sign {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 49px;
+    font-size: 16px;
+    line-height: 134.4%;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 83px;
+    padding-bottom: 103px;
+    background-image: none;
+
+    &__wrapper {
+      width: 82%;
+      margin: 0 auto;
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__sign {
+      margin-bottom: 50px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 33px;
+    padding-bottom: 41px;
+
+    &__wrapper {
+      width: 100%;
+    }
+
+    &__title {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    &__sign {
+      margin-bottom: 25px;
+    }
+  }
+}
