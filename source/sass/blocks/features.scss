@@ -13,8 +13,10 @@
 
   &__item {
     width: 48%;
+    padding: 40px 43px 49px 45px;
     margin-bottom: 30px;
     background-color: #ffffff;
+    box-sizing: border-box;
     box-shadow:
       inset 3px 0 0 0 #00b2ff,
       inset 0 0 0 1px #ebebeb;
@@ -27,13 +29,6 @@
       background-color: #00b2ff;
       box-shadow: inset 3px 0 0 0 #00b2ff;
     }
-  }
-
-  &__link {
-    display: block;
-    padding: 40px 43px 49px 45px;
-    text-decoration: none;
-    box-sizing: border-box;
   }
 
   &__img {
@@ -98,7 +93,7 @@
     padding-top: 54px;
     padding-bottom: 30px;
 
-    &__link {
+    &__item {
       padding: 25px;
     }
 
@@ -137,6 +132,7 @@
 
     &__item {
       width: 100%;
+      padding-bottom: 28px;
       margin-bottom: 20px;
 
       &:nth-last-child(-n + 2) {
@@ -146,10 +142,6 @@
       &:last-child {
         margin-bottom: 0;
       }
-    }
-
-    &__link {
-      padding-bottom: 28px;
     }
 
     &__title {

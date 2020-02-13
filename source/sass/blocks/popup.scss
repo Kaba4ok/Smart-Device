@@ -1,0 +1,160 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+
+  &__wrapper {
+    position: absolute;
+    top: 136px;
+    left: 50%;
+    max-width: 490px;
+    padding: 33px 39px 36px;
+    font-weight: normal;
+    color: #ffffff;
+    transform: translateX(-50%);
+    background-color: #00b2ff;
+    box-sizing: border-box;
+  }
+
+  &__title {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 11px;
+    font-family: "Roboto Condensed";
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 140.6%;
+  }
+
+  &__sign {
+    padding: 0;
+    padding-right: 10px;
+    margin: 0;
+    margin-bottom: 31px;
+    font-size: 16px;
+    line-height: 134.4%;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    padding: 14px 24px;
+    margin: 0;
+    margin-bottom: 30px;
+    font-family: "PT Mono";
+    font-size: 16px;
+    font-weight: normal;
+    color: #ffffff;
+    line-height: 134.4%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    box-sizing: border-box;
+
+    &::placeholder {
+      font-family: "PT Mono";
+      font-size: 16px;
+      font-weight: normal;
+      color: #ffffff;
+      line-height: 134.4%;
+    }
+
+    &--textarea {
+      height: 104px;
+      resize: none;
+    }
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 8px;
+    padding-right: 10px;
+    padding-left: 48px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    box-sizing: border-box;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 7px;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #ffffff;
+      box-sizing: border-box;
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    -webkit-appearance: none;
+    opacity: 0;
+  }
+
+  &__checkbox:checked ~ &__label::before {
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__btn-submit {
+    width: 100%;
+    padding: 14px;
+    margin: 0;
+    margin-bottom: 35px;
+    font-size: 14px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &::before, &::after {
+      position: absolute;
+      left: -2px;
+      top: 8px;
+      content: "";
+      width: 20px;
+      height: 1px;
+      background-color: #ffffff;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+  }
+
+  &__return-link {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+  }
+
+  &--show {
+    display: block;
+  }
+
+  &--blank {
+    display: block;
+  }
+}
