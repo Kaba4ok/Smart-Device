@@ -19,6 +19,7 @@
     display: flex;
     justify-content: space-between;
     width: 32%;
+    margin-right: 142px;
   }
 
   &__links {
@@ -31,11 +32,26 @@
     padding: 0;
     margin: 0;
     white-space: nowrap;
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &__link {
     color: rgba(27, 45, 55, 0.5);
     text-decoration: none;
+  }
+
+  @media (max-width: $beforeTablet) {
+    &__texts {
+      display: none;
+    }
+
+    &__links {
+      width: 100%;
+    }
   }
 
   @media (max-width: $tablet-width) {
@@ -44,14 +60,6 @@
 
     &__wrapper {
       width: 94%;
-    }
-
-    &__texts {
-      display: none;
-    }
-
-    &__links {
-      width: 100%;
     }
   }
 
