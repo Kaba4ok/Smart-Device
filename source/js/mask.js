@@ -7,12 +7,15 @@
 
   let setMask = function (element) {
     let maskOptions = {
-      mask: '+{7(}000)00-00-000'
+      mask: '+{7(}000)000-00-00'
     };
 
     let mask = IMask(element, maskOptions);
 
-    element.value = '+7(';
+    if (element.value.length === 0) {
+      element.value = '+7(';
+      element.setCustomValidity('Заполните это поле');
+    }
 
     element.selectionStart = element.value.length;
 

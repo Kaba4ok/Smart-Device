@@ -119,7 +119,38 @@
     }
 
     &__title {
+      position: relative;
+      padding-top: 29px;
+      padding-bottom: 27px;
       margin-bottom: 0;
+
+      &::before, &::after {
+        position: absolute;
+        background-color: #c4c4c4;
+      }
+
+      &::before {
+        content: "";
+        width: 16px;
+        height: 1px;
+        top: 37px;
+        right: 0;
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        width: 1px;
+        height: 16px;
+        top: 29px;
+        right: 8px;
+        transform: translateX(50%);
+      }
+
+      &--menu-close {
+        &::after {
+          content: "";
+        }
+      }
     }
   }
 }

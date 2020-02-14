@@ -10,8 +10,29 @@
   let inputPhone = popup.querySelector('.popup__input--phone');
   let inputTextarea = popup.querySelector('.popup__input--textarea');
   let popupCheckbox = popup.querySelector('.popup__checkbox');
+  let label = popup.querySelector('.popup__label');
+  let btnSubmit = popup.querySelector('.popup__btn-submit');
 
   const ESC_KEYCODE = 27;
+
+  let getCheckboxCondition = function () {
+    let condition = true;
+
+    if (!popupCheckbox.checked) {
+      condition = false;
+    }
+
+    return condition;
+  }
+
+  let btnSubmitCondition = function () {
+    let checkboxCondition = getCheckboxCondition();
+
+    if (!checkboxCondition) {
+      btnSubmit.classList.add('popup__btn-submit--disabled');
+      btnSubmit.setAttribute('disabled', 'disabled');
+    }
+  }
 
   let recordsStorage = function () {
     let isStorageSupport = true;
@@ -46,9 +67,20 @@
     inputName.focus();
     popupCloseBtn.addEventListener('click', onPopupCloseClick);
     popup.addEventListener('click', onPopupClick);
+    label.addEventListener('click', onLabelClick);
     popupForm.addEventListener('submit', onPopupSubmit);
     document.addEventListener('keydown', onPopupEscPress);
     preventScrolling();
+
+    inputPhone.addEventListener('blur', function () {
+      if (inputPhone.value.length < 14) {
+        inputPhone.setCustomValidity('Номер телефона должен состоять из 10 цифр');
+      } else {
+        inputPhone.setCustomValidity('');
+      }
+    });
+
+    btnSubmitCondition();
   }
 
   let closePopup = function () {
@@ -84,13 +116,20 @@
     }
   }
 
-  let onPopupSubmit = function (evt) {
-    if (!inputName.value || !inputPhone.value || !inputTextarea.value || !popupCheckbox.checked) {
-      evt.preventDefault();
-      console.log('error');
-    } else {
-      recordsStorage();
+  let onLabelClick = function () {
+    let checkboxCondition = getCheckboxCondition();
+
+    if (checkboxCondition) {
+      btnSubmit.classList.add('popup__btn-submit--disabled');
+      btnSubmit.setAttribute('disabled', 'disabled');
+    } else if (btnSubmit.classList.contains('popup__btn-submit--disabled')) {
+      btnSubmit.classList.remove('popup__btn-submit--disabled');
+      btnSubmit.removeAttribute('disabled');
     }
+  }
+
+  let onPopupSubmit = function (evt) {
+    recordsStorage();
   }
 
   callbackBtn.addEventListener('click', onCallbackBtnClick);

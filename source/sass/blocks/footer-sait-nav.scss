@@ -49,8 +49,6 @@
 
   @media (max-width: $mobile-width) {
     width: 100%;
-    padding-top: 29px;
-    padding-bottom: 27px;
     margin-right: 0;
     border-bottom: 1px solid rgba(98, 105, 98, 0.2);
 
@@ -61,13 +59,11 @@
     }
 
     &__columns {
-      padding-top: 29px;
-    }
+      padding-bottom: 27px;
 
-    &__menu-btn {
-      display: block;
-      top: 0;
-      right: 0;
+      &--menu-close {
+        display: none;
+      }
     }
   }
 }

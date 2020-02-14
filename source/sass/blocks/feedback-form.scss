@@ -81,6 +81,10 @@
     color: #ffffff;
     border: 1px solid #ffffff;
     background-color: transparent;
+
+    &--disabled {
+      opacity: 0.3;
+    }
   }
 
   @media (max-width: $tablet-width) {

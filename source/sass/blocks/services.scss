@@ -33,6 +33,18 @@
   &__link {
     position: relative;
     display: block;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+
+    &:focus {
+      transform: scale(1.03);
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
   }
 
   &__item-title {
@@ -63,6 +75,28 @@
     // width: 17%;
     // height: 10%;
     // background-position: 56% center;
+  }
+
+  &__hover-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &__link:hover &__hover-layer {
+    display: block;
+  }
+
+  &__link:focus &__hover-layer {
+    display: block;
+  }
+
+  &__link:active &__hover-layer {
+    display: block;
   }
 
   @media (max-width: $tablet-width) {

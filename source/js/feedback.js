@@ -7,6 +7,27 @@
   let inputPhone = form.querySelector('.feedback-form__input--phone');
   let inputTextarea = form.querySelector('.feedback-form__input--textarea');
   let permission = form.querySelector('.feedback-form__checkbox');
+  let label = form.querySelector('.feedback-form__label');
+  let btnSubmit = form.querySelector('.feedback-form__btn');
+
+  let getCheckboxCondition = function () {
+    let condition = true;
+
+    if (!permission.checked) {
+      condition = false;
+    }
+
+    return condition;
+  }
+
+  let btnSubmitCondition = function () {
+    let checkboxCondition = getCheckboxCondition();
+
+    if (!checkboxCondition) {
+      btnSubmit.classList.add('feedback-form__btn--disabled');
+      btnSubmit.setAttribute('disabled', 'disabled');
+    }
+  }
 
   let recordsStorage = function () {
     let isStorageSupport = true;
@@ -25,15 +46,34 @@
     }
   }
 
-  let onFormSubmit = function (evt) {
-    if (!inputName.value || !inputPhone.value || !inputTextarea.value || !permission.checked) {
-      evt.preventDefault();
-      console.log('error');
-    } else {
-      recordsStorage();
+  let onLabelClick = function () {
+    let checkboxCondition = getCheckboxCondition();
+
+    if (checkboxCondition) {
+      btnSubmit.classList.add('feedback-form__btn--disabled');
+      btnSubmit.setAttribute('disabled', 'disabled');
+    } else if (btnSubmit.classList.contains('feedback-form__btn--disabled')) {
+      btnSubmit.classList.remove('feedback-form__btn--disabled');
+      btnSubmit.removeAttribute('disabled');
     }
   }
 
+  let onFormSubmit = function (evt) {
+    recordsStorage();
+  }
+
+  inputPhone.addEventListener('blur', function () {
+    if (inputPhone.value.length < 14) {
+      inputPhone.setCustomValidity('Номер телефона должен состоять из 10 цифр');
+    } else {
+      inputPhone.setCustomValidity('');
+    }
+  });
+
+  label.addEventListener('click', onLabelClick);
+
   form.addEventListener('submit', onFormSubmit);
+
+  btnSubmitCondition();
 
 })();

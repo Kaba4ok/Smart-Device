@@ -19,20 +19,15 @@
   }
 
   @media (max-width: $mobile-width) {
-    position: relative;
     width: 91%;
-    padding-top: 29px;
-    padding-bottom: 27px;
     margin: 0 auto;
 
-    &__menu-btn {
-      display: block;
-      top: 29px;
-      right: 0;
-    }
-
     &__list {
-      padding-top: 29px;
+      padding-bottom: 27px;
+
+      &--menu-close {
+        display: none;
+      }
     }
   }
 }
