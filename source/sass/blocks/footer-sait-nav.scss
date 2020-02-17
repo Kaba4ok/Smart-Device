@@ -1,6 +1,6 @@
 .footer-sait-nav {
   width: 55%;
-  margin-right: 116px;
+  margin-right: 109px;
 
   &__columns {
     display: flex;
@@ -10,7 +10,7 @@
   }
 
   &__column {
-    margin-right: 75px;
+    margin-right: 73px;
 
     &:last-child {
       margin-right: 0;
@@ -28,6 +28,21 @@
     line-height: 25px;
     color: rgba(27, 45, 55, 0.5);
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      color: rgba(27, 45, 55, 0.8);
+    }
+
+    &:focus {
+      text-decoration: underline;
+      color: rgba(27, 45, 55, 0.8);
+    }
+
+    &:active {
+      text-decoration: underline;
+      color: rgba(27, 45, 55, 0.2);
+    }
   }
 
   &__menu-btn {

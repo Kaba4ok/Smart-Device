@@ -46,10 +46,10 @@
     }
   }
 
-  let onLabelClick = function () {
+  let onCheckboxChange = function () {
     let checkboxCondition = getCheckboxCondition();
 
-    if (checkboxCondition) {
+    if (!checkboxCondition) {
       btnSubmit.classList.add('feedback-form__btn--disabled');
       btnSubmit.setAttribute('disabled', 'disabled');
     } else if (btnSubmit.classList.contains('feedback-form__btn--disabled')) {
@@ -70,7 +70,7 @@
     }
   });
 
-  label.addEventListener('click', onLabelClick);
+  permission.addEventListener('change', onCheckboxChange);
 
   form.addEventListener('submit', onFormSubmit);
 

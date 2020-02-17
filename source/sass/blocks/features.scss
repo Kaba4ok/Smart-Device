@@ -4,7 +4,6 @@
 
   &__list {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
@@ -12,17 +11,24 @@
   }
 
   &__item {
-    width: 48%;
+    max-width: 48.71%;
+    min-height: 299px;
     padding: 40px 43px 49px 45px;
-    margin-bottom: 30px;
+    margin-bottom: 2.56%;
+    margin-right: 2.56%;
     background-color: #ffffff;
     box-sizing: border-box;
     box-shadow:
       inset 3px 0 0 0 #00b2ff,
       inset 0 0 0 1px #ebebeb;
+    cursor: pointer;
 
     &:nth-last-child(-n + 2) {
       margin-bottom: 0;
+    }
+
+    &:nth-child(even) {
+      margin-right: 0;
     }
 
     &:hover {
@@ -33,7 +39,7 @@
 
   &__img {
     display: block;
-    margin-bottom: 23px;
+    margin-bottom: 21px;
     fill: #00B2FF;
 
     &--stopwatch {
@@ -47,8 +53,9 @@
     }
 
     &--detective {
-      width: 36px;
-      height: 31px;
+      width: 38px;
+      height: 39px;
+      margin-bottom: 17px;
     }
 
     &--tag {
@@ -60,8 +67,8 @@
   &__title {
     padding: 0;
     margin: 0;
-    margin-bottom: 15px;
-    font-family: "Roboto Condensed";
+    margin-bottom: 17px;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-size: 24px;
     font-weight: normal;
     line-height: 140.6%;
@@ -94,7 +101,15 @@
     padding-bottom: 30px;
 
     &__item {
-      padding: 25px;
+      width: 47.9%;
+      min-height: 232px;
+      padding: 25px 21px;
+      padding-left: 27px;
+      margin-right: 4.2%;
+      margin-bottom: 4.2%;
+      box-shadow:
+        inset 2px 0 0 0 #00b2ff,
+        inset 0 0 0 1px #ebebeb;
     }
 
     &__img {
@@ -103,6 +118,7 @@
       &--stopwatch {
         width: 29px;
         height: 35px;
+        margin-bottom: 7px;
       }
 
       &--hired {
@@ -111,8 +127,9 @@
       }
 
       &--detective {
-        width: 30px;
-        height: 26px;
+        width: 32px;
+        height: 32px;
+        margin-bottom: 8px;
       }
 
       &--tag {
@@ -124,6 +141,9 @@
     &__title {
       margin-bottom: 12px;
 
+      &--detective {
+        margin-bottom: 18px;
+      }
     }
   }
 
@@ -131,8 +151,10 @@
     padding-top: 37px;
 
     &__item {
-      width: 100%;
-      padding-bottom: 28px;
+      max-width: 100%;
+      width: 99.3%;
+      padding-bottom: 30px;
+      margin-right: 0;
       margin-bottom: 20px;
 
       &:nth-last-child(-n + 2) {
@@ -141,6 +163,22 @@
 
       &:last-child {
         margin-bottom: 0;
+      }
+
+      &--hired {
+        padding-right: 10px;
+      }
+    }
+
+    &__img {
+      margin-bottom: 12px;
+
+      &--hired {
+        margin-bottom: 15px;
+      }
+
+      &--detective {
+        margin-bottom: 8px;
       }
     }
 

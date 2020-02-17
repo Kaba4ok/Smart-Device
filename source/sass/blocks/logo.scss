@@ -6,6 +6,7 @@
     width: 52px;
     height: 52px;
     margin-right: 16px;
+    margin-left: 4px;
   }
 
   &__wrapper {
@@ -15,9 +16,9 @@
 
   &__name {
     padding: 0;
-    padding-bottom: 4px;
+    padding-bottom: 3px;
     margin: 0;
-    font-family: "Roboto Condensed";
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-size: 25px;
     font-weight: bold;
     white-space: nowrap;
@@ -26,10 +27,21 @@
   &__sign {
     padding: 0;
     margin: 0;
-    font-family: "Roboto";
+    font-family: "Roboto", "Arial", sans-serif;
     font-size: 12px;
     font-weight: 500;
     color: #788891;
+  }
+
+  &:hover &__sign {
+    text-decoration: underline;
+  }
+
+  @media (max-width: $tablet-width) {
+
+    &__img {
+      margin-left: 2px;
+    }
   }
 
   @media (max-width: $mobile-width) {

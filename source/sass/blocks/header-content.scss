@@ -6,8 +6,8 @@
   &__title {
     padding: 0;
     margin: 0;
-    margin-bottom: 31px;
-    font-family: "Roboto Condensed";
+    margin-bottom: 30px;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-size: 80px;
     font-weight: bold;
     letter-spacing: 0.07em;
@@ -16,14 +16,14 @@
 
   &__wrapper {
     position: relative;
-    padding-left: 95px;
+    padding-left: 98px;
 
     &::before {
       content: "";
       position: absolute;
-      top: 17px;
-      left: 5px;
-      width: 66px;
+      top: 15px;
+      left: 4px;
+      width: 64px;
       height: 2px;
       background-color: #ffffff;
     }
@@ -32,8 +32,7 @@
   &__description {
     padding: 0;
     margin: 0;
-    margin-bottom: 37px;
-    font-family: "PT Mono";
+    margin-bottom: 42px;
     font-size: 22px;
     font-weight: normal;
     line-height: 156.8%;
@@ -42,11 +41,25 @@
   &__btn {
     display: block;
     width: 407px;
-    padding: 19px 0 18px;
+    padding: 19px 0;
     font-size: 16px;
     color: #ffffff;
     text-decoration: none;
     background-color: #00b2ff;
+
+    &:hover {
+      box-shadow: 0 0 0 1px #ffffff;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 1px #ffffff;
+    }
+
+    &:active {
+      box-shadow:
+        0 0 0 1px #ffffff,
+        inset 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    }
   }
 
   &__mobile-btn-text {
@@ -55,12 +68,12 @@
 
   @media (max-width: $tablet-width) {
     width: 470px;
-    padding-top: 116px;
+    padding-top: 117px;
     padding-left: 66px;
 
     &__title {
       font-size: 60px;
-      margin-bottom: 42px;
+      margin-bottom: 30px;
     }
 
     &__wrapper {
@@ -68,17 +81,19 @@
 
       &::before {
         top: 16px;
+        left: 2px;
         width: 33px;
       }
     }
 
     &__description {
       font-size: 18px;
-      margin-bottom: 44px;
+      margin-bottom: 55px;
     }
 
     &__btn {
       width: 379px;
+      padding-bottom: 18px;
     }
   }
 
@@ -94,6 +109,11 @@
 
     &__wrapper {
       padding-left: 0;
+
+      &::before {
+        top: 14px;
+        left: 4px;
+      }
     }
 
     &__description {
@@ -104,6 +124,7 @@
 
     &__btn {
       width: 287px;
+      margin-left: 4px;
     }
 
     &__btn-text {

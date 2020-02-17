@@ -1,5 +1,5 @@
 .feedback {
-  padding-top: 96px;
+  padding-top: 92px;
   padding-bottom: 114px;
   font-weight: normal;
   color: #ffffff;
@@ -21,8 +21,8 @@
   &__title {
     padding: 0;
     margin: 0;
-    margin-bottom: 7px;
-    font-family: "Roboto Condensed";
+    margin-bottom: 10px;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-size: 36px;
     font-weight: normal;
     line-height: 140.6%;
@@ -30,14 +30,15 @@
 
   &__sign {
     padding: 0;
+    padding-left: 3px;
     margin: 0;
-    margin-bottom: 49px;
+    margin-bottom: 50px;
     font-size: 16px;
     line-height: 134.4%;
   }
 
   @media (max-width: $tablet-width) {
-    padding-top: 83px;
+    padding-top: 80px;
     padding-bottom: 103px;
     background-image: none;
 
@@ -48,6 +49,7 @@
 
     &__title {
       font-size: 32px;
+      margin-bottom: 18px;
     }
 
     &__sign {
@@ -56,8 +58,8 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 33px;
-    padding-bottom: 41px;
+    padding-top: 30px;
+    padding-bottom: 42px;
 
     &__wrapper {
       width: 100%;
@@ -65,11 +67,12 @@
 
     &__title {
       font-size: 28px;
-      margin-bottom: 15px;
+      margin-bottom: 14px;
     }
 
     &__sign {
-      margin-bottom: 25px;
+      margin-left: -2px;
+      margin-bottom: 23px;
     }
   }
 }

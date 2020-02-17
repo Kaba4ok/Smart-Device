@@ -1,17 +1,18 @@
 .feedback-form {
+  padding-left: 5px;
+  box-sizing: border-box;
 
   &__input-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 41px;
   }
 
   &__input {
     display: block;
-    width: 47%;
+    width: 47.2%;
     padding: 14px 16px;
     margin: 0;
-    font-family: "PT Mono";
     font-size: 16px;
     font-weight: normal;
     color: #ffffff;
@@ -21,7 +22,6 @@
     box-sizing: border-box;
 
     &::placeholder {
-      font-family: "PT Mono";
       font-size: 16px;
       font-weight: normal;
       color: #ffffff;
@@ -31,8 +31,17 @@
     &--textarea {
       width: 100%;
       height: 154px;
-      margin-bottom: 43px;
+      margin-bottom: 44px;
       resize: none;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.05);
+      outline: 1px solid #ffffff;
     }
   }
 
@@ -44,8 +53,8 @@
   &__label {
     position: relative;
     width: 47%;
-    padding-top: 8px;
-    padding-left: 40px;
+    padding-top: 10px;
+    padding-left: 37px;
     font-size: 14px;
     color: rgba(255, 255, 255, 0.8);
     box-sizing: border-box;
@@ -53,12 +62,21 @@
     &::before {
       content: "";
       position: absolute;
-      top: 9px;
-      left: 7px;
+      top: 10px;
+      left: 5px;
       width: 16px;
       height: 16px;
       border: 1px solid #ffffff;
       box-sizing: border-box;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      text-decoration: underline;
+      opacity: 0.5;
     }
   }
 
@@ -73,33 +91,90 @@
     background-position: center;
   }
 
+  &__checkbox:focus ~ &__label {
+    text-decoration: underline;
+  }
+
   &__btn {
-    width: 47%;
+    align-self: flex-start;
+    width: 47.3%;
     padding: 14px 18px 13px;
     margin: 0;
     font-size: 14px;
     color: #ffffff;
     border: 1px solid #ffffff;
-    background-color: transparent;
+    background-color: #00b2ff;
+
+    &:hover {
+      color: #00b2ff;
+      background-color: #ffffff;
+    }
+
+    &:focus {
+      color: #00b2ff;
+      background-color: #ffffff;
+    }
+
+    &:active {
+      color: #00b2ff;
+      background-color: #ffffff;
+      box-shadow: inset 0 0 5px 0 rgba(0, 178, 255, 0.7);
+    }
 
     &--disabled {
       opacity: 0.3;
+
+      &:hover {
+        color: #ffffff;
+        background-color: #00b2ff;
+      }
+
+      &:focus {
+        color: #ffffff;
+        background-color: #00b2ff;
+      }
+
+      &:active {
+        color: #ffffff;
+        background-color: #00b2ff;
+        box-shadow: none;
+      }
     }
   }
 
   @media (max-width: $tablet-width) {
+    padding-top: 3px;
+    padding-left: 3px;
 
     &__input-wrapper {
-      margin-bottom: 41px;
+      margin-bottom: 43px;
+    }
+
+    &__input {
+      padding-bottom: 16px;
     }
 
     &__input--textarea {
       height: 159px;
-      margin-bottom: 44px;
+      margin-bottom: 45px;
+    }
+
+    &__label {
+      padding-top: 9px;
+      padding-left: 40px;
+
+      &::before {
+        left: 7px;
+      }
+    }
+
+    &__btn {
+      padding-bottom: 15px;
     }
   }
 
   @media (max-width: $mobile-width) {
+    margin-left: -2px;
 
     &__input-wrapper {
       flex-direction: column;
@@ -108,13 +183,16 @@
 
     &__input {
       width: 100%;
-      margin-bottom: 30px;
+      padding-bottom: 17px;
+      margin-bottom: 31px;
 
       &:last-child {
         margin-bottom: 0;
       }
 
       &--textarea {
+        height: 104px;
+        padding-top: 13px;
         margin-bottom: 30px;
       }
     }
@@ -125,11 +203,16 @@
 
     &__label {
       width: 100%;
+      padding-left: 34px;
+
+      &::before {
+        left: 0;
+      }
     }
 
     &__btn {
       width: 100%;
-      margin-bottom: 30px;
+      margin-bottom: 21px;
     }
   }
 }

@@ -35,8 +35,8 @@
   &__title {
     padding: 0;
     margin: 0;
-    margin-bottom: 29px;
-    font-family: "Roboto Condensed";
+    margin-bottom: 26px;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-size: 15px;
     font-weight: normal;
     line-height: 16px;
@@ -51,7 +51,7 @@
     &__logo-nav-border-wrapper {
       flex-direction: column;
       width: 100%;
-      padding-bottom: 40px;
+      padding-bottom: 36px;
     }
 
     &__logo-border-wrapper {
@@ -62,7 +62,7 @@
 
     &__logo-prolongation-social-wrapper {
       display: flex;
-      justify-content: space-between;
+      // justify-content: space-between;
       align-items: center;
       width: 94%;
       padding-bottom: 25px;
@@ -70,13 +70,16 @@
     }
 
     &__logo {
+      margin-right: 104px;
       margin-bottom: 0;
     }
 
     &__prolongation {
       display: block;
       padding: 0;
+      padding-top: 6px;
       margin: 0;
+      margin-right: auto;
       font-size: 13px;
       font-weight: normal;
       line-height: 24px;
@@ -86,13 +89,18 @@
     }
 
     &__nav-contacts-wrapper {
-      width: 94%;
+      width: 93.5%;
       margin: 0 auto;
       padding-top: 38px;
+    }
+
+    &__title {
+      margin-bottom: 25px;
     }
   }
 
   @media (max-width: $mobile-width) {
+    padding-top: 46px;
 
     &__logo-nav-border-wrapper {
       padding-bottom: 0;
@@ -102,13 +110,23 @@
       flex-direction: column;
       align-items: center;
       width: 91%;
+      padding-bottom: 54px;
     }
 
     &__logo {
-      margin-bottom: 26px;
+      width: 216px;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    &__logo .logo__img {
+      width: 52px;
+      height: 52px;
+      margin-left: 0;
     }
 
     &__prolongation {
+      margin-right: 0;
       margin-bottom: 31px;
     }
 
@@ -134,7 +152,7 @@
         width: 16px;
         height: 1px;
         top: 37px;
-        right: 0;
+        right: 3px;
         transform: translateY(-50%);
       }
 
@@ -142,7 +160,7 @@
         width: 1px;
         height: 16px;
         top: 29px;
-        right: 8px;
+        right: 11px;
         transform: translateX(50%);
       }
 

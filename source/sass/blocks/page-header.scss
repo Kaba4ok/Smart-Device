@@ -1,10 +1,10 @@
 .page-header {
   padding-top: 33px;
-  padding-bottom: 263px;
+  padding-bottom: 258px;
   color: #ffffff;
   background-image: url("../img/bg-header-desktop@1x.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
   background-color: #1b2931;
 
@@ -24,50 +24,76 @@
   &__callback {
     width: 180px;
     padding: 13px 0 12px;
+    margin-right: 5px;
     font-size: 14px;
     color: #ffffff;
     text-decoration: none;
     border: 1px solid #ffffff;
+
+    &:hover {
+      background-color: #00b2ff;
+    }
+
+    &:focus {
+      background-color: #00b2ff;
+    }
+
+    &:active {
+      background-color: #00b2ff;
+      box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    }
   }
 
   &__scroll {
     display: block;
     width: 93px;
-    font-family: "PT Mono";
     font-size: 14px;
     font-weight: normal;
     color: #ffffff;
     text-decoration: none;
     opacity: 0.5;
-    transform: translate(-35px, 130px) rotate(-90deg);
+    transform: translate(-35px, 131px) rotate(-90deg);
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.2;
+    }
+  }
+
+  @media (max-width: $low-desktop-width) {
+
+    &__callback {
+      display: none;
+    }
   }
 
   @media (max-width: $tablet-width) {
     padding-top: 20px;
     padding-bottom: 163px;
-    background-image: url("../img/bg-header-tablet@1x.jpg");
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-header-tablet@2x.jpg");
-    }
-
-    &__callback {
-      display: none;
-    }
 
     &__scroll {
       display: none;
     }
   }
 
+  @media (max-width: 900px) {
+    background-image: url("../img/bg-header-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-header-tablet@2x.jpg");
+    }
+  }
+
   @media (max-width: $mobile-width) {
     padding-top: 17px;
     padding-bottom: 70px;
-    background-image: url("../img/bg-header-mobile@1x.jpg");
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-header-mobile@2x.jpg");
-    }
 
     &__logo .logo__name {
       display: none;
@@ -79,6 +105,14 @@
 
     &__logo {
       width: 38px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    background-image: url("../img/bg-header-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-header-mobile@2x.jpg");
     }
   }
 }

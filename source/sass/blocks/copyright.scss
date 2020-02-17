@@ -1,5 +1,5 @@
 .copyright {
-  padding: 14px 0;
+  padding: 11px 0;
   font-size: 13px;
   font-weight: normal;
   line-height: 24px;
@@ -18,14 +18,14 @@
   &__texts {
     display: flex;
     justify-content: space-between;
-    width: 32%;
+    width: 32.3%;
     margin-right: 142px;
   }
 
   &__links {
     display: flex;
     justify-content: space-between;
-    width: 57%;
+    width: 57.6%;
   }
 
   &__text {
@@ -34,23 +34,54 @@
     white-space: nowrap;
     margin-right: 40px;
 
+    &:first-child {
+      padding-left: 2px;
+    }
+
     &:last-child {
       margin-right: 0;
     }
   }
 
   &__link {
+    padding-right: 5px;
     color: rgba(27, 45, 55, 0.5);
     text-decoration: none;
+    white-space: nowrap;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      color: rgba(27, 45, 55, 0.8);
+    }
+
+    &:focus {
+      text-decoration: underline;
+      color: rgba(27, 45, 55, 0.8);
+    }
+
+    &:active {
+      text-decoration: underline;
+      color: rgba(27, 45, 55, 0.2);
+    }
   }
 
-  @media (max-width: $beforeTablet) {
+  @media (max-width: $low-desktop-width) {
     &__texts {
       display: none;
     }
 
     &__links {
       width: 100%;
+    }
+
+    &__link {
+      padding-left: 4px;
+      padding-right: 3px;
+      margin-right: 0px;
     }
   }
 

@@ -23,41 +23,67 @@
     text-decoration: none;
   }
 
+  &__link:hover &__link-text {
+    text-decoration: underline;
+  }
+
+  &__link:focus &__link-text {
+    text-decoration: underline;
+  }
+
+  &__link:active &__link-text {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: underline;
+  }
+
   &__icon {
     position: absolute;
 
     &--email {
-      top: 3px;
-      left: 0;
+      top: 1px;
+      left: 0px;
       width: 19px;
-      height: 14px;
+      height: 15px;
     }
 
     &--phone {
-      top: 0;
+      top: 1px;
       left: 6px;
       width: 18px;
       height: 18px;
     }
   }
 
+  @media (max-width: $low-desktop-width) {
+    margin-right: 0;
+  }
+
   @media (max-width: $tablet-width) {
     justify-content: space-between;
-    width: 83px;
-    margin-right: 0;
+    width: 84px;
 
     &__item {
       margin-right: 0;
     }
 
     &__link {
+      width: 25px;
+      height: 25px;
       padding-left: 0;
+
+      &--email {
+        width: 25px;
+        height: 25px;
+      }
+
+      &--phone {
+        width: 26px;
+        height: 26px;
+      }
     }
 
     &__icon {
       position: static;
-      top: 0;
-      left: 0;
       display: block;
 
       &--email {

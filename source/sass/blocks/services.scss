@@ -1,13 +1,13 @@
 .services {
-  padding-top: 93px;
-  padding-bottom: 127px;
-  font-family: "Roboto Condensed";
+  padding-top: 88px;
+  padding-bottom: 97px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   background-color: #1b2d37;
 
   &__title {
     padding: 0;
     margin: 0;
-    margin-bottom: 47px;
+    margin-bottom: 52px;
     font-size: 36px;
     font-weight: normal;
     color: #ffffff;
@@ -16,16 +16,18 @@
 
   &__list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     padding: 0;
     margin: 0;
     list-style: none;
   }
 
   &__item {
-    margin-right: 30px;
+    width: 31.62%;
+    margin-right: 2.564%;
+    margin-bottom: 2.564%;
 
-    &:last-child {
+    &:nth-child(3n) {
       margin-right: 0;
     }
   }
@@ -70,11 +72,6 @@
     background-image: url("../img/icon-arrow.svg");
     background-repeat: no-repeat;
     background-position: 32px center;
-
-    /* relative size and position */
-    // width: 17%;
-    // height: 10%;
-    // background-position: 56% center;
   }
 
   &__hover-layer {
@@ -100,12 +97,12 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding-top: 53px;
-    padding-bottom: 78px;
+    padding-top: 50px;
+    padding-bottom: 80px;
 
     &__title {
       width: 85%;
-      margin-bottom: 46px;
+      margin-bottom: 51px;
       font-size: 32px;
     }
 
@@ -115,8 +112,9 @@
     }
 
     &__item {
+      width: 100%;
       margin-right: 0;
-      margin-bottom: 46px;
+      margin-bottom: 44px;
 
       &:last-child {
         margin-bottom: 0;
@@ -124,41 +122,50 @@
     }
 
     &__item-title {
-      top: 43px;
-      left: 10%;
+      top: 40px;
+      left: 6.2%;
       width: 23%;
+
+      &--parts {
+        top: 52px;
+        left: 6.3%;
+      }
     }
 
     &__img {
       width: 100%;
       height: auto;
     }
-
-    /* relative size*/
-    // &__btn {
-    //   width: 9%;
-    //   height: 24%;
-    // }
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 53px;
-    padding-bottom: 64px;
+    padding-top: 50px;
+    padding-bottom: 63px;
 
     &__title {
       width: 100%;
-      margin-bottom: 37px;
+      padding-left: 10px;
+      margin-bottom: 42px;
       font-size: 28px;
     }
 
     &__item {
-      margin-bottom: 30px;
+      margin-bottom: 29px;
     }
 
     &__item-title {
       top: 20px;
       left: 12%;
       width: 58%;
+
+      &--parts {
+        top: 30px;
+        left: 12.3%;
+      }
+    }
+
+    &__btn {
+      background-position: 27px center;
     }
   }
 }
