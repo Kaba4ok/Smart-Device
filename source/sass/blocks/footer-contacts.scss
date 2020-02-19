@@ -14,6 +14,11 @@
     list-style: none;
   }
 
+  &__link {
+    color: rgba(27, 45, 55, 0.5);
+    text-decoration: none;
+  }
+
   @media (max-width: $tablet-width) {
     width: auto;
   }
